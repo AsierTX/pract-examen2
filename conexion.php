@@ -2,7 +2,7 @@
 
 
 // Aldagaiak
-$hostDB = '127.0.0.1';
+$hostDB = 'db';
 $nombreDB = 'ejemplo';
 $usuarioDB = 'root';
 $contrasenyaDB = '';
