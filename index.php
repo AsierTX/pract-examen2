@@ -1,11 +1,9 @@
 <?php
-
-
 // Aldagaiak
 $hostDB = 'db';
 $nombreDB = 'ejemplo';
 $usuarioDB = 'root';
-$contrasenyaDB = '';
+$contrasenyaDB = 'admin1234';
 // Datu basera konektatu
 $hostPDO = "mysql:host=$hostDB;dbname=$nombreDB;";
 $miPDO = new PDO($hostPDO, $usuarioDB, $contrasenyaDB);
