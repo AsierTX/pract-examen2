@@ -1,4 +1,9 @@
 <?php
+
+include 'conexion.php';
+
+
+
 // Konprobatu POST-etik hartzen dugun
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Aldagaiak hartu
@@ -6,13 +11,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $autor = isset($_REQUEST['autor']) ? $_REQUEST['autor'] : null;
     $disponible = isset($_REQUEST['disponible']) ? $_REQUEST['disponible'] : null;
     // aldagaiak
-    $hostDB = '127.0.0.1';
-    $nombreDB = 'ejemplo';
-    $usuarioDB = 'root';
-    $contrasenyaDB = '';
-    // Datu basearekin konektatu
-    $hostPDO = "mysql:host=$hostDB;dbname=$nombreDB;";
-    $miPDO = new PDO($hostPDO, $usuarioDB, $contrasenyaDB);
+
+
+
     // Preparatu INSERT
     $miInsert = $miPDO->prepare('INSERT INTO libros (titulo, autor, disponible) VALUES (:titulo, :autor, :disponible)');
     // Exekutatu INSERT datuekin

@@ -1,12 +1,9 @@
 <?php
-// Aldagaiak
-$hostDB = '127.0.0.1';
-$nombreDB = 'ejemplo';
-$usuarioDB = 'root';
-$contrasenyaDB = '';
-// Datu basera konektatu
-$hostPDO = "mysql:host=$hostDB;dbname=$nombreDB;";
-$miPDO = new PDO($hostPDO, $usuarioDB, $contrasenyaDB);
+
+
+include 'conexion.php';
+
+
 // SELECT prestatu
 $miConsulta = $miPDO->prepare('SELECT * FROM libros;');
 // Kontsulta exekutatu

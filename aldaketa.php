@@ -1,17 +1,14 @@
 <?php
-// Aldagaiak
-$hostDB = '127.0.0.1';
-$nombreDB = 'ejemplo';
-$usuarioDB = 'root';
-$contrasenyaDB = '';
+
+include 'conexion.php';
+
+
 $codigo = isset($_REQUEST['codigo']) ? $_REQUEST['codigo'] : null;
 $titulo = isset($_REQUEST['titulo']) ? $_REQUEST['titulo'] : null;
 $autor = isset($_REQUEST['autor']) ? $_REQUEST['autor'] : null;
 $disponible = isset($_REQUEST['disponible']) ? $_REQUEST['disponible'] : null;
 
-// Datu basera konektatu
-$hostPDO = "mysql:host=$hostDB;dbname=$nombreDB;";
-$miPDO = new PDO($hostPDO, $usuarioDB, $contrasenyaDB);
+
 
 // Konprobatu POST-etik datuak datozen
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
