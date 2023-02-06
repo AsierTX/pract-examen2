@@ -1,7 +1,15 @@
 <?php
 
 
-include 'conexion.php';
+// Aldagaiak
+$hostDB = 'db';
+$nombreDB = 'ejemplo';
+$usuarioDB = 'root';
+$contrasenyaDB = '';
+// Datu basera konektatu
+$hostPDO = "mysql:host=$hostDB;dbname=$nombreDB;";
+$miPDO = new PDO($hostPDO, $usuarioDB, $contrasenyaDB);
+
 
 
 // SELECT prestatu
@@ -52,8 +60,7 @@ $miConsulta->execute();
            <td><?= $valor['autor']; ?></td>
            <td><?= $valor['disponible'] ? 'Si' : 'No'; ?></td>
            <!-- Aurrerago erabiliko da eliminatzeko edo aldatzeko erregistroa -->
-           <td><a class="button" href="aldaketa.php?codigo=<?= $valor['codigo'] ?>">Modificar</a></td>
-           <td><a class="button" href="kendu.php?codigo=<?= $valor['codigo'] ?>">Borrar</a></td>
+
         </tr>
     <?php endforeach; ?>
     </table>
